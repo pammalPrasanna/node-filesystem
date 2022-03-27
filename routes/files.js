@@ -20,7 +20,7 @@ res.send({
 
 
 router.post('/', function(req, res, next) {
-  const fileName = `${new Date().getDate()+new Date().getMonth()+new Date().getUTCFullYear()}-${new Date().getTime()}`;
+  const fileName = `${new Date().getDate()+`${new Date().getMonth()+1}`+new Date().getFullYear()}`+'-'+`${new Date().getTime()}`;
 
   const content = `${new Date()}`;
 
