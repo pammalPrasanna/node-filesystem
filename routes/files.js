@@ -5,17 +5,12 @@ var router = express.Router();
 const fs = require('fs')
 
 
-
-
-/* GET users listing. */
 router.get('/', function(req, res, next) {
+  const folderPath = 'files/';
 
-
-const folderPath = 'files/';
-
-res.send({
-  files_list: fs.readdirSync(folderPath)
-})
+  res.send({
+    files_list: fs.readdirSync(folderPath)
+  })
 });
 
 
